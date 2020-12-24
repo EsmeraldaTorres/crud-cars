@@ -1,0 +1,58 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="responsive.css">
+</head>
+<body>
+  <header>
+    <nav> 
+      <div class="text-center text-bolder text-crud text-white"> 
+        CARS CRUD 
+      </div>
+    </nav>
+  </header>
+  <div class="card row">
+    <div class="container col-lg-6">
+      <h1 class="text-salmon text-center">Card List</h1> 
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Brand</th>
+            <th>Model</th>
+            <th>Year</th>
+            <th>Price</th>
+            <th>Color</th>
+            <th class="text-center">Actions</th>
+          </tr>
+        </thead>
+        <tbody id="users-table-body">
+        </tbody>
+      </table>
+    </div>
+    <div class="container col-lg-6">
+      <div class="card-body">
+        <h2 class="text-center text-bolder text-salmon">New Car</h2>
+        <form onsubmit="event.preventDefault(), submitUser()" action="/users">              
+          <div class="form-group">
+            <label for="brand" class="text-bolder">Brand</label>
+            <input type="text" class="form-control" id="brand" placeholder="Enter a brand">
+            <label for="model" class="text-bolder">Model</label>
+            <input type="text" class="form-control" id="model" placeholder="Input a model">
+            <label for="year" class="text-bolder">Year</label>
+            <input type="text" class="form-control" id="year" placeholder="Input year">
+            <label for="price" class="text-bolder">Price</label>
+            <input type="text" class="form-control" id="price" placeholder="Enter price">
+            <label for="color" class="text-bolder">Color</label>
+            <input type="text" class="form-control" id="color" placeholder="Enter color">
+          </div>
+          <button type="submit" class="btn btn-dark">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="./javascript.js"></script>
+</body>
+</html>
